@@ -93,7 +93,7 @@ def readExperiAll(varid,timeperiod,level):
         data.close()
     elif level == 'zonmean': # 3d variables (zonal mean!)
         varidz = varid + '_' + level
-        filename = totaldirectory + varidz + '_1701-2000.nc'
+        filename = totaldirectory + varidz + '_1900-2000.nc'
         data = Dataset(filename,'r')
         lev = data.variables['level'][:]
         lat = data.variables['lat'][:]
@@ -133,7 +133,7 @@ def readExperiAll(varid,timeperiod,level):
     return lat,lon,lev,var
 
 #### Test function -- no need to use    
-#varid = 'T2M'
-#timeperiod = 'ANT_Fu'
-#level = 'surface'
+#varid = 'U'
+#timeperiod = 'SST_Fu'
+#level = 'profile'
 #lat,lon,lev,var = readExperiAll(varid,timeperiod,level)

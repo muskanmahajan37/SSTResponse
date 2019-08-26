@@ -59,7 +59,7 @@ def readDataPeriods(varnames,simulations,period):
     varfuture[np.where(varfuture <= -1e10)] = np.nan
     varpast[np.where(varpast <= -1e10)] = np.nan
     
-    ### Calculate over DJF
+    ### Calculate over months
     if period == 'JJA':
         print('Calculating over %s months!' % period)
         varfuturem = np.nanmean(varfuture[:,5:8,:,:],axis=1)
